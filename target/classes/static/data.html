@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>보훈 데이터 — RE:RUN</title>
+  <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/honor-run.css">
+</head>
+<body class="honor-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-honor" aria-label="주 메뉴">
+    <div class="container honor-nav-inner honor-nav-inner--sub">
+      <a class="brand-logo" href="/" aria-label="RE:RUN 리런 홈">
+        <span class="brand-logo__icon" aria-hidden="true">
+          <svg class="brand-logo__mobius" viewBox="0 0 40 40" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="rerunGradData" x1="0%" y1="20%" x2="100%" y2="80%">
+                <stop offset="0%" stop-color="#FF3B30"/>
+                <stop offset="48%" stop-color="#FF7A6E"/>
+                <stop offset="100%" stop-color="#007AFF"/>
+              </linearGradient>
+            </defs>
+            <path fill="none" stroke="url(#rerunGradData)" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round"
+              d="M7 27c2-10 8-16 15.5-15.5C29 12 33 17 31 22c-2.5 6.5-12 7-16 1.5-2-3-1.5-8 2.5-10.5C24 8 34 9 35 17c1 7-6 13-13.5 12.5"/>
+            <path fill="none" stroke="url(#rerunGradData)" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"
+              d="M11 14c4-6 12-8 18-4 4 2.5 5 8 2 12"/>
+          </svg>
+        </span>
+        <span class="brand-logo__type brand-logo__type--rerun">
+          <span class="brand-logo__rerun-en">RE:RUN</span>
+          <span class="brand-logo__rerun-ko">리런</span>
+        </span>
+      </a>
+
+      <div class="honor-nav-center">
+        <ul class="honor-nav-menu list-unstyled mb-0 d-flex flex-wrap justify-content-center gap-3 gap-lg-4">
+          <li><a class="honor-nav-link" href="#" data-bs-toggle="modal" data-bs-target="#courseRegionModalData">코스 선택</a></li>
+          <li><a class="honor-nav-link" href="/dashboard.html">나의 기록</a></li>
+          <li><a class="honor-nav-link" href="/course-history.html">코스 해설</a></li>
+          <li><a class="honor-nav-link" href="/community.html">커뮤니티</a></li>
+          <li><a class="honor-nav-link active" href="/data.html" aria-current="page">보훈 데이터</a></li>
+        </ul>
+      </div>
+
+      <div class="honor-nav-trail">
+        <a class="btn btn-sm btn-honor-outline d-none d-md-inline-flex" href="/community.html#proposal-form">현장 제안</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="courseRegionModalData" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content honor-modal">
+        <div class="modal-header border-secondary border-opacity-25">
+          <h2 class="modal-title h5 mb-0">어디를 달릴까요?</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+        </div>
+        <div class="modal-body d-grid gap-3">
+          <a href="/#kr-courses" class="region-pick-card" data-bs-dismiss="modal">
+            <div class="title"><span class="me-1" aria-hidden="true">🇰🇷</span>한국 사적지 코스</div>
+            <p class="desc">메인 페이지의 한국 코스 목록으로 이동합니다.</p>
+          </a>
+          <a href="/#us-courses" class="region-pick-card" data-bs-dismiss="modal">
+            <div class="title"><span class="me-1" aria-hidden="true">🇺🇸</span>미주 독립운동 코스</div>
+            <p class="desc">미주 특별 코스 소개 섹션으로 이동합니다.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="page-sub-hero">
+    <div class="container">
+      <h1>보훈 데이터</h1>
+      <p class="lead mb-0">
+        <strong class="text-white">국내·국외 보훈(독립) 사적지</strong> 현황, RE:RUN 코스 매칭, 러닝·완주 요약을 한곳에서 보기 위한 허브입니다.
+        지표는 <strong class="text-white">분기별로 집계·갱신</strong>되며, 행정·기관 데이터와 연동될수록 정밀해집니다.
+      </p>
+    </div>
+  </header>
+
+  <main class="container pb-5 content-readable">
+    <div class="alert border mb-4 small" style="background: rgba(0,122,255,0.08); border-color: rgba(0,122,255,0.25) !important; color: rgba(226,232,240,0.95);">
+      <i class="bi bi-info-circle me-2"></i>
+      국외 사적지 <strong>공식 선정</strong>은 국가보훈부·재외공관·지자체 공고를 따릅니다. RE:RUN은 그 과정을 돕는 <strong>코스·기록·커뮤니티 레이어</strong>입니다.
+    </div>
+
+    <section class="row g-3 mb-4">
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold accent-red mb-1">128</div>
+          <div class="small text-muted">등록된 국내 사적지 코스</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold accent-blue mb-1">14</div>
+          <div class="small text-muted">해외 거점 페어 후보</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold mb-1" style="color: #e8c547;">62%</div>
+          <div class="small text-muted">이번 분기 페어 코스 완주율</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold text-light mb-1">1.2k</div>
+          <div class="small text-muted">누적 검증 러닝 거리</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chart-card mb-4">
+      <h6><i class="bi bi-link-45deg me-1"></i>한·미 연결 코스 매칭표</h6>
+      <p class="small text-muted mb-3">같은 역사 서사를 양쪽에서 뛸 수 있도록 <strong class="text-light">페어</strong>로 묶은 매칭입니다. 명칭·주소는 기관 데이터에 맞춰 갱신합니다.</p>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover table-sm mb-0 align-middle" style="--bs-table-bg: transparent; border-color: rgba(255,255,255,0.1);">
+          <thead>
+            <tr class="text-muted small">
+              <th scope="col">한국 코스</th>
+              <th scope="col">미국 연결 거점</th>
+              <th scope="col">테마</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody class="small">
+            <tr>
+              <td>도산공원 코스</td>
+              <td>LA · 대한인국민회 일대</td>
+              <td>독립 의거 · 교민 단결</td>
+              <td><span class="badge text-bg-primary bg-opacity-50">페어 활성</span></td>
+            </tr>
+            <tr>
+              <td>독립의 함성 길</td>
+              <td>샌프란시스코 · 교민사 기념 코스(안)</td>
+              <td>3·1 정신 · 해외 여론</td>
+              <td><span class="badge text-bg-secondary">검토 중</span></td>
+            </tr>
+            <tr>
+              <td>민주의 물결 길</td>
+              <td>리버사이드 · 현지 기념 루트(안)</td>
+              <td>민주화 · 연대</td>
+              <td><span class="badge text-bg-secondary">제안 접수</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-6">
+        <div class="chart-card h-100">
+          <h6><i class="bi bi-diagram-3 me-1"></i>국외 사적지 후보를 준비할 때</h6>
+          <p class="small text-muted">선정 심사에서 자주 요구되는 <strong class="text-light">객관적 근거</strong>와 RE:RUN이 추가로 활용할 <strong class="text-light">러닝·GPS 메타데이터</strong>를 정리합니다.</p>
+          <ol class="small mb-0 ps-3">
+            <li class="mb-2"><strong class="text-light">사적성</strong>: 연표, 인물·사건, 1·2차 사료(문헌·신문·회고록) 출처.</li>
+            <li class="mb-2"><strong class="text-light">현장</strong>: 정확한 주소, 소유·출입, 안전한 공공 도로 기준 동선.</li>
+            <li class="mb-2"><strong class="text-light">한국 측 페어</strong>: 이미 서비스 중인 코스 또는 신규 제안 코스 ID.</li>
+            <li class="mb-0"><strong class="text-light">지역 동의</strong>: 유족회·동문회·현지 교민 단체 등 협력 가능 여부(연락처는 별도 동의 후 수집).</li>
+          </ol>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="chart-card h-100">
+          <h6><i class="bi bi-list-check me-1"></i>제출 전 체크리스트</h6>
+          <ul class="list-unstyled small mb-0">
+            <li class="d-flex gap-2 mb-2"><i class="bi bi-check2-circle text-info flex-shrink-0"></i> 한글·영문 요약(각 1페이지 이내)</li>
+            <li class="d-flex gap-2 mb-2"><i class="bi bi-check2-circle text-info flex-shrink-0"></i> 현장 사진·위치도(개인정보·민가 모자이크)</li>
+            <li class="d-flex gap-2 mb-2"><i class="bi bi-check2-circle text-info flex-shrink-0"></i> 러닝 거리·예상 소요·난이도(초안)</li>
+            <li class="d-flex gap-2 mb-2"><i class="bi bi-check2-circle text-info flex-shrink-0"></i> 보훈·문화재 관련 기존 지정 여부 조사 결과</li>
+            <li class="d-flex gap-2 mb-0"><i class="bi bi-check2-circle text-info flex-shrink-0"></i> 커뮤니티 <a href="/community.html#proposal-form" class="link-light">제안 폼</a> 초안 붙여넣기</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="chart-card mb-4">
+      <h6><i class="bi bi-clock-history me-1"></i>행정·연계 타임라인(참고)</h6>
+      <p class="small text-muted mb-3">실제 일정은 공고마다 다릅니다. RE:RUN에서는 단계별로 <strong class="text-light">코스 초안·시범 러닝·데이터 검수</strong>를 맞춥니다.</p>
+      <div class="row g-3 small">
+        <div class="col-md-4">
+          <div class="p-3 rounded border border-secondary border-opacity-25 h-100" style="background: rgba(255,255,255,0.03);">
+            <div class="fw-bold text-light mb-1">1단계 · 발굴</div>
+            <p class="mb-0 text-muted">현장 조사, 사료 수집, 페어 코스 매칭, 커뮤니티 공론.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 rounded border border-secondary border-opacity-25 h-100" style="background: rgba(255,255,255,0.03);">
+            <div class="fw-bold text-light mb-1">2단계 · 검증</div>
+            <p class="mb-0 text-muted">시범 러닝 GPS, 안전·교통 검토, 법무·윤리 검토.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 rounded border border-secondary border-opacity-25 h-100" style="background: rgba(255,255,255,0.03);">
+            <div class="fw-bold text-light mb-1">3단계 · 공식 반영</div>
+            <p class="mb-0 text-muted">기관 선정·등재 후 앱 노출, 대시보드 지표 연동.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chart-card">
+      <h6><i class="bi bi-database me-1"></i>데이터 정책</h6>
+      <ul class="small text-muted mb-0 ps-3">
+        <li class="mb-2">개인 위치·실명은 저장하지 않으며, 집계·통계만 노출합니다.</li>
+        <li class="mb-2">사적지 좌표는 공개 지도·기관 자료를 우선하며, 민감 구역은 코스에서 제외합니다.</li>
+        <li class="mb-0">수치 갱신 주기: <strong class="text-light">월 1회(목표)</strong> — 기관·행정 API 연동 시 자동 반영을 우선합니다.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="text-center text-muted small py-4 border-top border-secondary border-opacity-25">
+    RE:RUN(리런) · 보훈 데이터
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
