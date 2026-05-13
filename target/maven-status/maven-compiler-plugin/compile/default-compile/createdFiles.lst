@@ -1,7 +1,0 @@
-com\honorrun\controller\CourseController.class
-com\honorrun\dto\CoursePayload.class
-com\honorrun\dto\MapPoint.class
-com\honorrun\dto\Checkpoint.class
-com\honorrun\HonorRunApplication.class
-com\honorrun\controller\CourseController$DashboardStats.class
-com\honorrun\controller\CourseController$HeatPoint.class
