@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>보훈 데이터 — RE:RUN</title>
+  <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/honor-run.css">
+</head>
+<body class="honor-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-honor" aria-label="주 메뉴">
+    <div class="container honor-nav-inner honor-nav-inner--sub">
+      <a class="brand-logo" href="/" aria-label="RE:RUN 리런 홈">
+        <span class="brand-logo__icon" aria-hidden="true">
+          <svg class="brand-logo__mobius" viewBox="0 0 40 40" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="rerunGradData" x1="0%" y1="20%" x2="100%" y2="80%">
+                <stop offset="0%" stop-color="#FF3B30"/>
+                <stop offset="48%" stop-color="#FF7A6E"/>
+                <stop offset="100%" stop-color="#007AFF"/>
+              </linearGradient>
+            </defs>
+            <path fill="none" stroke="url(#rerunGradData)" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round"
+              d="M7 27c2-10 8-16 15.5-15.5C29 12 33 17 31 22c-2.5 6.5-12 7-16 1.5-2-3-1.5-8 2.5-10.5C24 8 34 9 35 17c1 7-6 13-13.5 12.5"/>
+            <path fill="none" stroke="url(#rerunGradData)" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"
+              d="M11 14c4-6 12-8 18-4 4 2.5 5 8 2 12"/>
+          </svg>
+        </span>
+        <span class="brand-logo__type brand-logo__type--rerun">
+          <span class="brand-logo__rerun-en">RE:RUN</span>
+          <span class="brand-logo__rerun-ko">리런</span>
+        </span>
+      </a>
+
+      <div class="honor-nav-center">
+        <ul class="honor-nav-menu list-unstyled mb-0 d-flex flex-wrap justify-content-center gap-3 gap-lg-4">
+          <li><a class="honor-nav-link" href="/">코스 선택</a></li>
+          <li><a class="honor-nav-link" href="/dashboard.html">나의 기록</a></li>
+          <li><a class="honor-nav-link" href="/course-history.html">코스 해설</a></li>
+          <li><a class="honor-nav-link" href="/community.html">커뮤니티</a></li>
+          <li><a class="honor-nav-link active" href="/data.html" aria-current="page">보훈 데이터</a></li>
+        </ul>
+      </div>
+      <div class="honor-nav-trail" aria-hidden="true"></div>
+    </div>
+  </nav>
+
+  <main class="container py-4 pb-5 content-readable">
+    <header class="subpage-intro">
+      <p class="small subpage-intro__kicker mb-1">데이터 허브</p>
+      <h1 class="h3 fw-bold subpage-intro__title mb-2">보훈 데이터</h1>
+      <p class="subpage-intro__lead mb-0 small">국내·국외 보훈(독립) 사적지 현황, RE:RUN 코스 매칭, 러닝·완주 요약을 한곳에서 볼 수 있습니다. 지표는 분기별로 집계·갱신됩니다.</p>
+    </header>
+
+    <section class="row g-3 mb-4">
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold accent-red mb-1">128</div>
+          <div class="small text-muted">등록된 국내 사적지 코스</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold accent-blue mb-1">14</div>
+          <div class="small text-muted">연결된 해외 코스</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold mb-1" style="color: #e8c547;">62%</div>
+          <div class="small text-muted">이번 분기 페어 코스 완주율</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="chart-card h-100 text-center py-3">
+          <div class="display-6 fw-bold text-light mb-1">1.2k</div>
+          <div class="small text-muted">누적 검증 러닝 거리</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chart-card mb-4">
+      <h6><i class="bi bi-link-45deg me-1"></i>한·미 연결 코스 매칭표</h6>
+      <p class="small text-muted mb-3">한국 코스와 해외 연결 거점을 짝지은 현황입니다. 같은 역사 서사를 양쪽에서 뛸 수 있도록 페어로 묶어 표시합니다.</p>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover table-sm mb-0 align-middle" style="--bs-table-bg: transparent; border-color: rgba(255,255,255,0.1);">
+          <thead>
+            <tr class="text-muted small">
+              <th scope="col">한국 코스</th>
+              <th scope="col">미국 연결 거점</th>
+              <th scope="col">테마</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody class="small">
+            <tr>
+              <td>도산공원 코스</td>
+              <td>LA · 대한인국민회 일대</td>
+              <td>독립 의거 · 교민 단결</td>
+              <td><span class="badge text-bg-primary bg-opacity-50">페어 활성</span></td>
+            </tr>
+            <tr>
+              <td>독립의 함성 길</td>
+              <td>샌프란시스코 · 교민사 기념 코스(안)</td>
+              <td>3·1 정신 · 해외 여론</td>
+              <td><span class="badge text-bg-secondary">검토 중</span></td>
+            </tr>
+            <tr>
+              <td>민주의 물결 길</td>
+              <td>리버사이드 · 현지 기념 루트(안)</td>
+              <td>민주화 · 연대</td>
+              <td><span class="badge text-bg-secondary">준비 중</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="chart-card mb-4">
+      <h6><i class="bi bi-bar-chart me-1"></i>코스별 러닝·완주 요약</h6>
+      <p class="small text-muted mb-3">최근 집계 기준 RE:RUN 참여 데이터입니다. 개인 기록은 <a href="/dashboard.html" class="link-light">나의 기록</a>에서 확인할 수 있습니다.</p>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover table-sm mb-0 align-middle" style="--bs-table-bg: transparent; border-color: rgba(255,255,255,0.1);">
+          <thead>
+            <tr class="text-muted small">
+              <th scope="col">코스</th>
+              <th scope="col" class="text-end">이번 달 완주</th>
+              <th scope="col" class="text-end">누적 거리</th>
+              <th scope="col" class="text-end">평균 페이스</th>
+            </tr>
+          </thead>
+          <tbody class="small">
+            <tr>
+              <td>독립의 함성 길</td>
+              <td class="text-end">142회</td>
+              <td class="text-end">612 km</td>
+              <td class="text-end">5′48″/km</td>
+            </tr>
+            <tr>
+              <td>도산공원 코스</td>
+              <td class="text-end">98회</td>
+              <td class="text-end">371 km</td>
+              <td class="text-end">6′02″/km</td>
+            </tr>
+            <tr>
+              <td>민주의 물결 길</td>
+              <td class="text-end">67회</td>
+              <td class="text-end">248 km</td>
+              <td class="text-end">5′55″/km</td>
+            </tr>
+            <tr>
+              <td>미주 특별 코스 (연결)</td>
+              <td class="text-end">23회</td>
+              <td class="text-end">89 km</td>
+              <td class="text-end">6′20″/km</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="chart-card">
+      <h6><i class="bi bi-database me-1"></i>집계 안내</h6>
+      <p class="small text-muted mb-0">표시되는 수치는 참여 러닝·완주 기록과 공개된 사적지 정보를 바탕으로 집계한 요약입니다. 개인 위치·실명은 저장하지 않으며 통계만 노출합니다. 갱신 주기는 <strong class="text-light">분기별</strong>이며, 코스·지역별 상세는 상단 지표와 매칭표에서 함께 확인할 수 있습니다.</p>
+    </section>
+  </main>
+
+  <footer class="text-center text-muted small py-4 border-top border-secondary border-opacity-25">
+    RE:RUN(리런) · 보훈 데이터
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

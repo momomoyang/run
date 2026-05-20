@@ -1,0 +1,26 @@
+# 기본은 자동
+* text=auto eol=lf
+
+# Windows 전용 스크립트는 CRLF 유지
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# Maven Wrapper 리눅스 셸 스크립트는 반드시 LF
+mvnw        text eol=lf
+mvnwDebug   text eol=lf
+gradlew     text eol=lf
+
+# 바이너리 — 줄바꿈/인코딩 변환 금지
+*.jar       binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.webp      binary
+*.ico       binary
+*.zip       binary
+*.gz        binary
+*.tar       binary
+*.pdf       binary
+*.woff      binary
+*.woff2     binary

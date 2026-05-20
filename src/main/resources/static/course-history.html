@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>코스 해설 — RE:RUN</title>
+  <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/honor-run.css">
+  <style>
+    .history-toc a { color: rgba(186, 198, 214, 0.95); text-decoration: none; }
+    .history-toc a:hover { color: #fff; }
+    .history-section h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: #f8fafc; }
+    .history-section p, .history-section li { color: rgba(203, 213, 225, 0.92); }
+    .history-section { scroll-margin-top: 5.5rem; }
+  </style>
+</head>
+<body class="honor-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-honor" aria-label="주 메뉴">
+    <div class="container honor-nav-inner honor-nav-inner--sub">
+      <a class="brand-logo" href="/" aria-label="RE:RUN 리런 홈">
+        <span class="brand-logo__icon" aria-hidden="true">
+          <svg class="brand-logo__mobius" viewBox="0 0 40 40" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="rerunGradHist" x1="0%" y1="20%" x2="100%" y2="80%">
+                <stop offset="0%" stop-color="#FF3B30"/>
+                <stop offset="48%" stop-color="#FF7A6E"/>
+                <stop offset="100%" stop-color="#007AFF"/>
+              </linearGradient>
+            </defs>
+            <path fill="none" stroke="url(#rerunGradHist)" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round"
+              d="M7 27c2-10 8-16 15.5-15.5C29 12 33 17 31 22c-2.5 6.5-12 7-16 1.5-2-3-1.5-8 2.5-10.5C24 8 34 9 35 17c1 7-6 13-13.5 12.5"/>
+            <path fill="none" stroke="url(#rerunGradHist)" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"
+              d="M11 14c4-6 12-8 18-4 4 2.5 5 8 2 12"/>
+          </svg>
+        </span>
+        <span class="brand-logo__type brand-logo__type--rerun">
+          <span class="brand-logo__rerun-en">RE:RUN</span>
+          <span class="brand-logo__rerun-ko">리런</span>
+        </span>
+      </a>
+
+      <div class="honor-nav-center">
+        <ul class="honor-nav-menu list-unstyled mb-0 d-flex flex-wrap justify-content-center gap-3 gap-lg-4">
+          <li><a class="honor-nav-link" href="/">코스 선택</a></li>
+          <li><a class="honor-nav-link" href="/dashboard.html">나의 기록</a></li>
+          <li><a class="honor-nav-link active" href="/course-history.html" aria-current="page">코스 해설</a></li>
+          <li><a class="honor-nav-link" href="/community.html">커뮤니티</a></li>
+          <li><a class="honor-nav-link" href="/data.html">보훈 데이터</a></li>
+        </ul>
+      </div>
+      <div class="honor-nav-trail" aria-hidden="true"></div>
+    </div>
+  </nav>
+
+  <main class="container py-4 pb-5 content-readable">
+    <header class="subpage-intro">
+      <p class="small subpage-intro__kicker mb-1">코스 백그라운드</p>
+      <h1 class="h3 fw-bold subpage-intro__title mb-2">코스 해설</h1>
+      <p class="subpage-intro__lead mb-0 small">RE:RUN이 잇는 길은 지도 위의 선이 아니라, 사람들이 살았고 외쳤던 장소들의 연결입니다. 뛰기 전에 배경을 알면 한 블록·한 언덕이 달리 읽힙니다.</p>
+    </header>
+
+    <section class="chart-card mb-4">
+      <h6 class="mb-3"><i class="bi bi-bookmarks me-1"></i>목차</h6>
+      <ul class="history-toc list-unstyled small mb-0 row g-2">
+        <li class="col-md-6"><a href="#sec-independence">독립의 함성 길</a></li>
+        <li class="col-md-6"><a href="#sec-dosan">도산공원 코스</a></li>
+        <li class="col-md-6"><a href="#sec-democracy">민주의 물결 길</a></li>
+        <li class="col-md-6"><a href="#sec-wall">서울 보훈의 벽</a></li>
+        <li class="col-md-6"><a href="#sec-us">미주 특별 코스</a></li>
+        <li class="col-md-6"><a href="#sec-points">포인트 · 현장 인증</a></li>
+      </ul>
+    </section>
+
+    <article id="sec-independence" class="chart-card history-section mb-4">
+      <h2><i class="bi bi-flag me-2 text-danger"></i>독립의 함성 길</h2>
+      <p class="small text-muted mb-3">종로 일대 — 3·1운동의 폭발력과 옥고의 희생을 잇는 루트</p>
+      <p>
+        1919년 3월 1일, <strong class="text-white">탑골공원</strong>에서 울려 퍼진 독립만세의 함성은 일제 강점기 민족 응집력의 정점이었습니다.
+        RE:RUN의 종로 코스는 단순히 광장의 상징성에 머무르지 않고, 그날의 결의가 개인이 감내해야 했던 고초로 이어지는
+        <strong class="text-white">희생의 궤적</strong>을 따라갑니다. 기독교계 독립운동가들이 은밀하게 모여 거사를 논의하고 민족 자치 역량을 결집했던
+        <strong class="text-white">승동교회</strong>의 공간적 선택을 짚어보고, 독립선언서 낭독으로 실질적인 천명을 이뤄낸
+        <strong class="text-white">태화관 터</strong>의 사라진 좌표를 지나갑니다.
+      </p>
+      <p class="mb-0">
+        이 길의 종착지인 <strong class="text-white">서대문형무소 역사관</strong>은 거사의 대가로 스러져간 선열들이 감금과 고문을 견뎌낸 통한의 현장입니다.
+        광장의 드높았던 함성이 어떻게 차가운 감옥의 벽으로 이어졌는지 그 역사적 대비를 몸으로 체감하며,
+        오늘날 우리가 누리는 자유의 무게를 되새기는 의미 깊은 루트입니다.
+      </p>
+    </article>
+
+    <article id="sec-dosan" class="chart-card history-section mb-4">
+      <h2><i class="bi bi-tree me-2 text-success"></i>도산공원 코스</h2>
+      <p class="small text-muted mb-3">안창호와 안중근 — 교육·조직과 의거의 정신이 교차하는 도심의 궤적</p>
+      <p>
+        강남의 중심에 위치한 <strong class="text-white">도산공원</strong>은 미주 한인 사회를 조직하고 민족 교육을 통한 실력양성운동을 이끈
+        <strong class="text-white">도산 안창호</strong> 선생을 기리는 공간입니다. 도산의 사상은
+        <strong class="text-white">현장에서의 철저한 준비</strong>와 <strong class="text-white">공동체의 자립</strong>을 골자로 합니다.
+        흥미롭게도 이 코스는 1909년 하얼빈 의거의 주인공인 <strong class="text-white">안중근</strong> 의사의 서사와 긴밀하게 호흡을 맞춥니다.
+      </p>
+      <p class="mb-0">
+        역사적으로 1908년 샌프란시스코에서 일어난 <strong class="text-white">장인환·전명운</strong> 의사의 거사는 안창호 선생이 이끌던 공립협회 세력을 결집시켰고,
+        이 해외 거사의 흐름은 이듬해 안중근 의사의 이토 히로부미 저격이라는 거대한 폭발력으로 이어졌습니다.
+        RE:RUN은 이 코스를 통해 도산이 보여준 <strong class="text-white">해외 교민 조직화와 교육</strong>이라는 축과,
+        안중근이 보여준 <strong class="text-white">의열 투쟁</strong>이라는 독립운동의 두 위대한 줄기가 어떻게 상호작용했는지 보여주고자 합니다.
+        영웅 서사를 넘어, 시대를 지탱한 교민과 학생들의 연대를 느끼며 달리는 길입니다.
+      </p>
+    </article>
+
+    <article id="sec-democracy" class="chart-card history-section mb-4">
+      <h2><i class="bi bi-water me-2 text-info"></i>민주의 물결 길</h2>
+      <p class="small text-muted mb-3">4·19 혁명 — 독립의 정신이 독재 저항으로 이어진 민주주의의 강물</p>
+      <p>
+        1960년 4월, 불의한 독재 정권에 맞서 학생과 시민들이 맨몸으로 스크럼을 짜고 나아갔던 위대한 여정을 러닝 동선으로 재해석했습니다.
+        주권재민을 향한 <strong class="text-white">4·19 혁명</strong>의 외침은 과거 선열들이 목숨 바쳐 찾고자 했던
+        <strong class="text-white">자주독립 국가의 완성</strong>과 맞닿아 있습니다. 나라를 되찾은 독립운동의 정신이,
+        나라를 바로 세우는 민주화 운동의 줄기로 도도하게 이어짐을 증명하는 코스입니다.
+      </p>
+      <p class="mb-0">
+        본 코스는 도심의 통행 규칙과 행사 상황에 따라 유연하게 <strong class="text-white">안전 동선</strong>을 확보하며 달릴 수 있도록 가이드합니다.
+      </p>
+    </article>
+
+    <article id="sec-wall" class="chart-card history-section mb-4">
+      <h2><i class="bi bi-columns-gap me-2 text-warning"></i>서울 보훈의 벽</h2>
+      <p class="small text-muted mb-3">일상 속 숨겨진 역사의 레이어를 깨우는 순환 루트</p>
+      <p class="mb-0">
+        보훈의 기억은 거대한 석조 기념관에만 박제되어 있지 않습니다. 우리가 매일 무심히 지나는 보도블록 위의 작은 표석,
+        골목길의 벽화, 도로의 이름 속에 흩어져 있습니다. <strong class="text-white">보훈의 벽</strong> 코스는 서울 도심 곳곳에 파편화되어 있는
+        보훈 인프라를 하나의 선으로 연결하는 시도입니다. RE:RUN은 참가자들이 이 러닝을 통해
+        “내가 오늘 달린 이 아스팔트 도로가 사실은 100년 전 독립운동가들이 치열하게 걷고 고민했던 역사의 레이어 위”임을
+        직관적으로 깨닫도록 단계별 경유지를 확장해 나갑니다.
+      </p>
+    </article>
+
+    <article id="sec-us" class="chart-card history-section mb-4">
+      <h2><i class="bi bi-globe-americas me-2 text-primary"></i>미주 특별 코스</h2>
+      <p class="small text-muted mb-3">캘리포니아 — 대한인국민회의 탄생과 해외 독립운동의 심장을 걷다</p>
+
+      <h3 class="h6 text-white mt-3">샌프란시스코 · 의거의 불꽃</h3>
+      <p>
+        20세기 초, 미주 한인 이민의 첫 관문이었던 이곳은 해외 독립운동의 발화점이었습니다.
+        1908년 <strong class="text-white">장인환·전명운</strong> 의사가 친일 외교고문 스티븐스를 저격한 의거는 흩어져 있던 한인 사회를 하나로 묶는 결정적 계기가 되었고,
+        이는 곧 미주 최고 독립운동 자치기관인 <strong class="text-white">대한인국민회</strong> 탄생의 도화선이 되었습니다.
+        언덕과 항만이 어우러진 지형을 보며, 당시 공립협회 회관 터와 의거지를 분주히 오갔던 선열들의 뜨거운 심박수를 느껴봅니다.
+      </p>
+
+      <h3 class="h6 text-white mt-3">리버사이드 · 오렌지 농장의 땀방울</h3>
+      <p>
+        뜨거운 태양 아래 한인 동포들이 오렌지 농장, 패킹하우스에서 땀 흘려 일하며 생계를 유지하던 눈물의 공간입니다.
+        그러나 이들은 단순한 노동자에 머무르지 않고 최초의 한인 타운인 <strong class="text-white">파차파 캠프</strong>를 형성하여 정치적 자각을 이뤄냈습니다.
+        <strong class="text-white">안창호</strong> 선생의 지휘 아래 이 노동의 대가들이 대한인국민회의 독립 자금으로 환원되었던,
+        <strong class="text-white">노동과 독립운동의 결합</strong>을 상징하는 위대한 일터입니다.
+      </p>
+
+      <h3 class="h6 text-white mt-3">LA · 흥사단 &amp; 단결의 길</h3>
+      <p class="mb-0">
+        미주 독립운동의 최종 본부이자 심장부입니다. 샌프란시스코에서 시작된 대한인국민회 총본부가 LA로 이전하며 완성된
+        <strong class="text-white">대한인국민회 총회관</strong>은 해외 한인들의 실질적인 정부 역할을 수행했습니다.
+        USC 인근의 안창호 선생 가족 거주지, 민족 지도자 양성의 요람이었던 <strong class="text-white">흥사단소</strong>를 잇는 루트는
+        독립을 향한 모금, 조직, 생활이 어떻게 한 공간에서 유기적으로 움직였는지 보여주는 완벽한 독립운동의 메카입니다.
+      </p>
+    </article>
+
+    <article id="sec-points" class="chart-card history-section mb-4">
+      <h2><i class="bi bi-award me-2 accent-red"></i>포인트 · 현장 인증</h2>
+      <p class="small text-muted mb-3">러닝 참여 설계 — 보훈 포인트 &amp; 역사 연동</p>
+      <p>
+        RE:RUN은 단순한 일회성 운동을 지향하지 않습니다. 사적지 체크포인트를 순차적으로 방문하여 완주하면
+        <strong class="text-white">보훈 포인트</strong>를 부여하고, 이를 독립유공자 후손 기부 매칭이나 보훈 뱃지 리워드로 연계합니다.
+        특히 사용자가 각 스팟(기념비, 표석 등)에 도달했을 때, 위의 깊이 있는 역사 해설 조각을
+        <strong class="text-white">인앱 도슨트</strong>로 팝업 제공하여
+        <strong class="text-white">인증이 곧 역사적 학습</strong>이 되는 지적 체감을 제공합니다.
+      </p>
+      <p class="mb-0">
+        사진 인증 시 메타데이터 검증을 통해 부정 인증을 방지하고 보훈의 진정성을 유지하는 UI/UX를 구축해 나갑니다.
+        구체적인 포인트 규칙·인증 UI는 서비스 버전에 맞추어 공지됩니다. 먼저
+        <a href="/run.html" class="link-light">러닝 화면</a>과
+        <a href="/dashboard.html" class="link-light">나의 기록</a>에서 거리·시간·체크포인트 흐름을 익혀 두시면 이후 업데이트와 자연스럽게 이어집니다.
+      </p>
+    </article>
+  </main>
+
+  <footer class="text-center text-muted small py-4 border-top border-secondary border-opacity-25">
+    RE:RUN(리런) · 코스 해설
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
